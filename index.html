@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<script src="//code.jquery.com/jquery-1.8.0.min.js"></script>
+		<script src="jquery.shuffleText.js"></script>
+	</head>
+	<body>
+		<h3>Default Settings</h3>
+		<p id="shuffle1">Default Settings!</p>
+		<h3>Word Bounded. Randomly Capitalized? Punctuation, Included!</h3>
+		<p id="shuffle2">Word Bounded. Randomly Capitalized? Punctuation, Included!</p>
+		<script>
+			$(document).ready(function() {
+				$("#shuffle1").shuffleText();
+				$("#shuffle2").shuffleText({
+					animation: true,
+					bound: "word",
+					include_punctuation: true,
+					interval: 50,
+					keep_caps: "random",
+					timeout: 500
+				});
+			});
+		</script>
+	</body>
+</html>
